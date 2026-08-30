@@ -1,4 +1,5 @@
-import logo from "@/assets/logo.png";
+import logoAsset from "@/assets/logo.png.asset.json";
+const logo = logoAsset.url;
 import pkgPrivate from "@/assets/pkg-private.jpg";
 import pkgWedding from "@/assets/pkg-wedding.jpg";
 import pkgMassive from "@/assets/pkg-massive.jpg";
