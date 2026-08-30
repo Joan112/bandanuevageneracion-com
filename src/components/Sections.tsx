@@ -5,6 +5,7 @@ import {
   Clock,
   FileSignature,
   Landmark,
+  Mic2,
   MapPin,
   Music,
   Music2,
@@ -197,15 +198,11 @@ export function VideoSection() {
 
 const repertoire = [
   { icon: Music, label: "Corridos clásicos" },
-  { icon: Mic2Alt, label: "Rancheras" },
+  { icon: Mic2, label: "Rancheras" },
   { icon: PartyPopper, label: "Cumbias" },
   { icon: Star, label: "Románticas" },
   { icon: Music2, label: "Éxitos modernos" },
 ];
-
-function Mic2Alt(props: { size?: number; strokeWidth?: number; className?: string }) {
-  return <Music2 {...props} />;
-}
 
 export function RepertoireSection() {
   return (
