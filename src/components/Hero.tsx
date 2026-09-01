@@ -1,5 +1,5 @@
 import { BadgeCheck, Clock, MessageCircle, Volume2 } from "lucide-react";
-import heroImg from "@/assets/hero-banda.jpg";
+import heroAsset from "@/assets/escenario.jpg.asset.json";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 const badges = [
@@ -13,10 +13,10 @@ export function Hero() {
   return (
     <section id="inicio" className="relative flex min-h-[85vh] items-center overflow-hidden pt-[72px]">
       <img
-        src={heroImg}
-        alt="Banda sinaloense tocando en vivo sobre el escenario con luces cálidas"
+        src={heroAsset.url}
+        alt="Escenario de Banda Nueva Generación con luces de colores y audio profesional de noche"
         width={1920}
-        height={1088}
+        height={1440}
         fetchPriority="high"
         className="absolute inset-0 h-full w-full object-cover"
       />

@@ -2,7 +2,7 @@ import logoAsset from "@/assets/logo.png.asset.json";
 const logo = logoAsset.url;
 import pkgPrivate from "@/assets/pkg-private.jpg";
 import pkgWedding from "@/assets/pkg-wedding.jpg";
-import pkgMassive from "@/assets/pkg-massive.jpg";
+import escenarioAsset from "@/assets/escenario.jpg.asset.json";
 
 /**
  * CONFIGURACIÓN CENTRALIZADA
@@ -11,7 +11,8 @@ import pkgMassive from "@/assets/pkg-massive.jpg";
 export const siteConfig = {
   brandName: "Banda Nueva Generación",
   // Reemplaza por el número real (formato internacional sin +, ni espacios).
-  whatsappNumber: "52XXXXXXXXXX",
+  whatsappNumber: "526672992461",
+  phoneDisplay: "667 299 2461",
   facebookUrl: "",
   instagramUrl: "",
   tiktokUrl: "",
@@ -98,8 +99,8 @@ export const packages: Package[] = [
     price: "Cotización personalizada por producción",
     ctaLabel: "Cotizar Evento Especial",
     analyticsId: "package_massive_whatsapp",
-    image: pkgMassive,
-    imageAlt: "Escenario de feria con luces y público multitudinario de noche",
+    image: escenarioAsset.url,
+    imageAlt: "Escenario con audio profesional, luces de colores y equipo de Banda Nueva Generación",
   },
 ];
 
