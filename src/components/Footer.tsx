@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Music2, Youtube } from "lucide-react";
+import { Facebook, Instagram, Music2, Phone, Youtube } from "lucide-react";
 import { navLinks, siteConfig } from "@/config/site";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 
@@ -73,6 +73,13 @@ export function Footer() {
           <p className="mt-5 font-body text-[15px] leading-[1.65] text-muted-2">
             Atención directa por WhatsApp con el equipo de contrataciones.
           </p>
+          <a
+            href={`tel:+52${siteConfig.whatsappNumber.slice(2)}`}
+            className="mt-4 inline-flex items-center gap-2 font-body text-[16px] font-bold text-gold transition-colors hover:text-gold-light"
+          >
+            <Phone size={17} strokeWidth={1.9} aria-hidden="true" />
+            {siteConfig.phoneDisplay}
+          </a>
           <div className="mt-5">
             <WhatsAppButton
               packageName="Consulta desde el footer"
