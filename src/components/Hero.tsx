@@ -79,11 +79,11 @@ export function Hero() {
 
         <div className="rounded-[20px] border border-hairline bg-surface/70 p-3 backdrop-blur-sm">
           <img
-            src={bandaAsset.url}
-            alt="Integrantes de Banda Nueva Generación con trajes dorados"
+            src={sideAsset.url}
+            alt="Escenario de Banda Nueva Generación con audio profesional y luces de colores"
             width={1920}
-            height={1280}
-            className="w-full rounded-[14px] object-contain"
+            height={1440}
+            className="w-full rounded-[14px] object-cover"
           />
         </div>
       </div>
