@@ -1,6 +1,6 @@
 import { BadgeCheck, Clock, MessageCircle, Volume2 } from "lucide-react";
-import heroAsset from "@/assets/escenario.jpg.asset.json";
-import bandaAsset from "@/assets/banda-integrantes.webp.asset.json";
+import heroAsset from "@/assets/banda-integrantes.webp.asset.json";
+import sideAsset from "@/assets/escenario.jpg.asset.json";
 
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 
@@ -16,9 +16,9 @@ export function Hero() {
     <section id="inicio" className="relative flex min-h-[85vh] items-center overflow-hidden pt-[72px]">
       <img
         src={heroAsset.url}
-        alt="Escenario de Banda Nueva Generación con luces de colores y audio profesional de noche"
+        alt="Integrantes de Banda Nueva Generación con trajes negros y dorados"
         width={1920}
-        height={1440}
+        height={1280}
         fetchPriority="high"
         className="absolute inset-0 h-full w-full object-cover"
       />
@@ -79,11 +79,11 @@ export function Hero() {
 
         <div className="rounded-[20px] border border-hairline bg-surface/70 p-3 backdrop-blur-sm">
           <img
-            src={bandaAsset.url}
-            alt="Integrantes de Banda Nueva Generación con trajes dorados"
+            src={sideAsset.url}
+            alt="Escenario de Banda Nueva Generación con audio profesional y luces de colores"
             width={1920}
-            height={1280}
-            className="w-full rounded-[14px] object-contain"
+            height={1440}
+            className="w-full rounded-[14px] object-cover"
           />
         </div>
       </div>
