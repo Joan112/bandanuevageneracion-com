@@ -1,5 +1,7 @@
 import { BadgeCheck, Clock, MessageCircle, Volume2 } from "lucide-react";
 import heroAsset from "@/assets/escenario.jpg.asset.json";
+import bandaAsset from "@/assets/banda-integrantes.webp.asset.json";
+
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 const badges = [
