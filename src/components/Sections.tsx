@@ -10,7 +10,6 @@ import {
   Music,
   Music2,
   PartyPopper,
-  PartyPopper,
   Quote,
   ShieldCheck,
   Smartphone,
