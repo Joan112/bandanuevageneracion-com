@@ -19,7 +19,7 @@ import {
   Check,
   ChevronRight,
 } from "lucide-react";
-import videoCover from "@/assets/video-cover.jpg";
+import logoAsset from "@/assets/logo-ng.png.asset.json";
 import { packages, type Package } from "@/config/site";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import {
@@ -158,14 +158,14 @@ export function VideoSection() {
         />
         <div className="relative mt-12 overflow-hidden rounded-[20px] border border-hairline">
           <img
-            src={videoCover}
-            alt="Trompetistas y tuba de la banda durante una presentación en vivo"
-            width={1600}
-            height={912}
+            src={logoAsset.url}
+            alt="Logotipo de Banda Nueva Generación"
+            width={1920}
+            height={1512}
             loading="lazy"
-            className="aspect-video w-full object-cover"
+            className="aspect-video w-full bg-surface object-contain p-6"
           />
-          <div className="absolute inset-0 grid place-items-center bg-black/45">
+          <div className="absolute inset-0 grid place-items-center">
             <button
               type="button"
               aria-label="Reproducir video de presentación"
