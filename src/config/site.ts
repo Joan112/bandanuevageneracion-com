@@ -54,7 +54,7 @@ export const packages: Package[] = [
     ctaLabel: "Cotizar Fiesta Privada",
     analyticsId: "package_private_whatsapp",
     image: escenarioAsset.url,
-    imageAlt: "Invitados bailando en una fiesta privada nocturna con música en vivo",
+    imageAlt: "Escenario de Banda Nueva Generación con audio profesional y luces de colores",
   },
   {
     id: "wedding",
@@ -77,7 +77,7 @@ export const packages: Package[] = [
     ctaLabel: "Cotizar Boda / XV Años",
     analyticsId: "package_wedding_whatsapp",
     image: escenarioAsset.url,
-    imageAlt: "Primer baile de una boda elegante de noche con banda en vivo al fondo",
+    imageAlt: "Escenario de Banda Nueva Generación con audio profesional y luces de colores",
   },
   {
     id: "massive",
