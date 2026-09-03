@@ -1,8 +1,7 @@
-import logoAsset from "@/assets/logo.png.asset.json";
+import logoAsset from "@/assets/logo-ng.png.asset.json";
 const logo = logoAsset.url;
-import pkgPrivate from "@/assets/pkg-private.jpg";
-import pkgWedding from "@/assets/pkg-wedding.jpg";
 import escenarioAsset from "@/assets/escenario.jpg.asset.json";
+
 
 /**
  * CONFIGURACIÓN CENTRALIZADA
