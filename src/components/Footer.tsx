@@ -80,6 +80,13 @@ export function Footer() {
             <Phone size={17} strokeWidth={1.9} aria-hidden="true" />
             {siteConfig.phoneDisplay}
           </a>
+          <a
+            href="tel:+526728540913"
+            className="mt-3 inline-flex items-center gap-2 font-body text-[16px] font-bold text-gold transition-colors hover:text-gold-light"
+          >
+            <Phone size={17} strokeWidth={1.9} aria-hidden="true" />
+            672 854 0913
+          </a>
           <div className="mt-5">
             <WhatsAppButton
               packageName="Consulta desde el footer"
