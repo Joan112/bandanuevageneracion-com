@@ -10,7 +10,6 @@ import {
   Music,
   Music2,
   PartyPopper,
-  Play,
   Quote,
   ShieldCheck,
   Smartphone,
@@ -19,7 +18,6 @@ import {
   Check,
   ChevronRight,
 } from "lucide-react";
-import logoAsset from "@/assets/logo-ng.png.asset.json";
 import { packages, type Package } from "@/config/site";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import {
@@ -146,49 +144,39 @@ export function PackagesSection() {
   );
 }
 
-/* ------------------------------------ Video ------------------------------------ */
+/* ------------------------------------ Video / TikTok ------------------------------------ */
 
 export function VideoSection() {
   return (
     <section id="videos" className="section bg-surface-alt">
       <div className="container-site">
         <SectionHeading
-          title="Así suena Nueva Generación en vivo"
-          subtitle="No solo queremos decirte cómo suena. Queremos que lo escuches."
+          title="Así suena Banda Nueva Generación"
+          subtitle="Mientras preparamos los videos oficiales del sitio, escucha nuestro sonido en vivo en TikTok."
         />
-        <div className="relative mt-12 overflow-hidden rounded-[20px] border border-hairline">
-          <img
-            src={logoAsset.url}
-            alt="Logotipo de Banda Nueva Generación"
-            width={1920}
-            height={1512}
-            loading="lazy"
-            className="aspect-video w-full bg-surface object-contain p-6"
-          />
-          <div className="absolute inset-0 grid place-items-center">
-            <button
-              type="button"
-              aria-label="Reproducir video de presentación"
-              className="grid h-[72px] w-[72px] place-items-center rounded-full border border-gold-soft bg-background/70 text-gold transition-transform duration-200 hover:-translate-y-0.5 hover:bg-background/85 motion-reduce:transform-none"
-            >
-              <Play size={30} strokeWidth={1.75} aria-hidden="true" />
-            </button>
-          </div>
-        </div>
-        <div className="mt-5 grid grid-cols-2 gap-4 sm:grid-cols-4">
-          {["Boda", "XV Años", "Jaripeo", "Feria"].map((label) => (
-            <div
-              key={label}
-              className="flex items-center justify-between rounded-[14px] border border-hairline bg-surface px-4 py-3"
-            >
-              <span className="font-body text-sm font-medium text-muted-2">{label}</span>
-              <Play size={16} strokeWidth={1.75} className="text-gold" aria-hidden="true" />
+        <div className="mt-12 flex justify-center">
+          <a
+            href="https://bandanuevageneracion-com.lovable.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Ver TikTok de Banda Nueva Generación"
+            className="group relative flex w-full max-w-[560px] flex-col items-center overflow-hidden rounded-[24px] border border-hairline bg-surface px-8 py-14 text-center transition-all duration-300 hover:-translate-y-1 hover:border-gold-soft motion-reduce:transform-none"
+          >
+            <div className="grid h-[92px] w-[92px] place-items-center rounded-full border border-hairline bg-surface-alt text-gold transition-colors group-hover:border-gold-soft">
+              <Music2 size={42} strokeWidth={1.5} aria-hidden="true" />
             </div>
-          ))}
+            <h3 className="mt-8 font-display text-[24px] font-bold text-foreground">
+              Síguenos en TikTok
+            </h3>
+            <p className="mx-auto mt-3 max-w-[360px] font-body text-base leading-[1.65] text-muted-2">
+              Videos en vivo, corridos, rancheras, cumbias y todos los momentos de la fiesta.
+            </p>
+            <span className="mt-8 inline-flex h-[54px] items-center justify-center gap-2 rounded-[14px] bg-gold px-8 font-body text-base font-bold text-background transition-colors duration-200 hover:bg-gold-light motion-reduce:transform-none">
+              <Music2 size={18} strokeWidth={1.75} aria-hidden="true" />
+              Ver TikTok de la banda
+            </span>
+          </a>
         </div>
-        <p className="mt-4 font-body text-[13px] text-muted">
-          Material de video pendiente de sustituir por grabaciones oficiales de la agrupación.
-        </p>
       </div>
     </section>
   );

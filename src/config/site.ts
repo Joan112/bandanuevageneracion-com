@@ -14,7 +14,7 @@ export const siteConfig = {
   phoneDisplay: "667 299 2461",
   facebookUrl: "",
   instagramUrl: "",
-  tiktokUrl: "",
+  tiktokUrl: "https://bandanuevageneracion-com.lovable.app",
   youtubeUrl: "",
   email: "",
   location: "",
