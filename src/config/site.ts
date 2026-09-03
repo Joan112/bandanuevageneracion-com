@@ -53,7 +53,7 @@ export const packages: Package[] = [
     price: "Cotización personalizada por fecha",
     ctaLabel: "Cotizar Fiesta Privada",
     analyticsId: "package_private_whatsapp",
-    image: pkgPrivate,
+    image: escenarioAsset.url,
     imageAlt: "Invitados bailando en una fiesta privada nocturna con música en vivo",
   },
   {
@@ -76,7 +76,7 @@ export const packages: Package[] = [
     price: "Cotización personalizada por fecha",
     ctaLabel: "Cotizar Boda / XV Años",
     analyticsId: "package_wedding_whatsapp",
-    image: pkgWedding,
+    image: escenarioAsset.url,
     imageAlt: "Primer baile de una boda elegante de noche con banda en vivo al fondo",
   },
   {
