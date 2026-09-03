@@ -18,7 +18,6 @@ import {
   Check,
   ChevronRight,
 } from "lucide-react";
-import logoAsset from "@/assets/logo-ng.png.asset.json";
 import { packages, type Package } from "@/config/site";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import {
