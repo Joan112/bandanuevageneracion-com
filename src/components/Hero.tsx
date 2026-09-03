@@ -74,7 +74,18 @@ export function Hero() {
             Respuesta directa del equipo de contrataciones · Sin intermediarios
           </p>
         </div>
+
+        <div className="rounded-[20px] border border-hairline bg-surface/70 p-3 backdrop-blur-sm">
+          <img
+            src={bandaAsset.url}
+            alt="Integrantes de Banda Nueva Generación con trajes dorados"
+            width={1920}
+            height={1280}
+            className="w-full rounded-[14px] object-contain"
+          />
+        </div>
       </div>
+
     </section>
   );
 }
