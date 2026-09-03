@@ -1,5 +1,7 @@
 import { BadgeCheck, Clock, MessageCircle, Volume2 } from "lucide-react";
 import heroAsset from "@/assets/escenario.jpg.asset.json";
+import bandaAsset from "@/assets/banda-integrantes.webp.asset.json";
+
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 const badges = [
@@ -22,8 +24,9 @@ export function Hero() {
       />
       <div className="hero-overlay absolute inset-0" aria-hidden="true" />
 
-      <div className="relative mx-auto w-full max-w-[1280px] px-5 py-20 md:px-8 md:py-28">
+      <div className="relative mx-auto grid w-full max-w-[1280px] grid-cols-1 items-center gap-10 px-5 py-20 md:px-8 md:py-28 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
         <div className="max-w-[700px]">
+
           <p className="font-body text-xs font-bold uppercase tracking-[0.22em] text-gold">
             Banda sinaloense en vivo
           </p>
@@ -73,7 +76,18 @@ export function Hero() {
             Respuesta directa del equipo de contrataciones · Sin intermediarios
           </p>
         </div>
+
+        <div className="rounded-[20px] border border-hairline bg-surface/70 p-3 backdrop-blur-sm">
+          <img
+            src={bandaAsset.url}
+            alt="Integrantes de Banda Nueva Generación con trajes dorados"
+            width={1920}
+            height={1280}
+            className="w-full rounded-[14px] object-contain"
+          />
+        </div>
       </div>
+
     </section>
   );
 }

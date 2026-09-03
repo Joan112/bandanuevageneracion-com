@@ -1,8 +1,7 @@
-import logoAsset from "@/assets/logo.png.asset.json";
+import logoAsset from "@/assets/logo-ng.png.asset.json";
 const logo = logoAsset.url;
-import pkgPrivate from "@/assets/pkg-private.jpg";
-import pkgWedding from "@/assets/pkg-wedding.jpg";
 import escenarioAsset from "@/assets/escenario.jpg.asset.json";
+
 
 /**
  * CONFIGURACIÓN CENTRALIZADA
@@ -54,8 +53,8 @@ export const packages: Package[] = [
     price: "Cotización personalizada por fecha",
     ctaLabel: "Cotizar Fiesta Privada",
     analyticsId: "package_private_whatsapp",
-    image: pkgPrivate,
-    imageAlt: "Invitados bailando en una fiesta privada nocturna con música en vivo",
+    image: escenarioAsset.url,
+    imageAlt: "Escenario de Banda Nueva Generación con audio profesional y luces de colores",
   },
   {
     id: "wedding",
@@ -77,8 +76,8 @@ export const packages: Package[] = [
     price: "Cotización personalizada por fecha",
     ctaLabel: "Cotizar Boda / XV Años",
     analyticsId: "package_wedding_whatsapp",
-    image: pkgWedding,
-    imageAlt: "Primer baile de una boda elegante de noche con banda en vivo al fondo",
+    image: escenarioAsset.url,
+    imageAlt: "Escenario de Banda Nueva Generación con audio profesional y luces de colores",
   },
   {
     id: "massive",
