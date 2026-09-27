@@ -1,7 +1,7 @@
 import logoAsset from "@/assets/logo-ng.png.asset.json";
 const logo = logoAsset.url;
 import escenarioAsset from "@/assets/escenario.jpg.asset.json";
-
+import integrantesAsset from "@/assets/banda-integrantes.webp.asset.json";
 
 /**
  * CONFIGURACIÓN CENTRALIZADA
@@ -14,7 +14,7 @@ export const siteConfig = {
   phoneDisplay: "667 299 2461",
   facebookUrl: "",
   instagramUrl: "",
-  tiktokUrl: "https://bandanuevageneracion-com.lovable.app",
+  tiktokUrl: "",
   youtubeUrl: "",
   email: "",
   location: "",
@@ -53,8 +53,8 @@ export const packages: Package[] = [
     price: "Cotización personalizada por fecha",
     ctaLabel: "Cotizar Fiesta Privada",
     analyticsId: "package_private_whatsapp",
-    image: escenarioAsset.url,
-    imageAlt: "Escenario de Banda Nueva Generación con audio profesional y luces de colores",
+    image: integrantesAsset.url,
+    imageAlt: "Integrantes de Banda Nueva Generación vestidos para una celebración",
   },
   {
     id: "wedding",
@@ -99,14 +99,16 @@ export const packages: Package[] = [
     ctaLabel: "Cotizar Evento Especial",
     analyticsId: "package_massive_whatsapp",
     image: escenarioAsset.url,
-    imageAlt: "Escenario con audio profesional, luces de colores y equipo de Banda Nueva Generación",
+    imageAlt:
+      "Escenario con audio profesional, luces de colores y equipo de Banda Nueva Generación",
   },
 ];
 
 export const navLinks = [
   { label: "Inicio", href: "#inicio" },
   { label: "Paquetes", href: "#paquetes" },
-  { label: "Videos", href: "#videos" },
+  { label: "La banda", href: "#experiencia" },
+  { label: "Escenario", href: "#escenario" },
   { label: "Cómo contratar", href: "#como-contratar" },
   { label: "Garantías", href: "#garantias" },
   { label: "Contacto", href: "#contacto" },
