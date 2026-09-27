@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap");
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
@@ -17,8 +18,8 @@
   --radius-2xl: calc(var(--radius) + 8px);
   --radius-3xl: calc(var(--radius) + 12px);
 
-  --font-display: "Montserrat", system-ui, sans-serif;
-  --font-body: "Inter", system-ui, sans-serif;
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body: "DM Sans", system-ui, sans-serif;
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -56,17 +57,17 @@
 }
 
 :root {
-  --radius: 0.875rem;
+  --radius: 0.5rem;
 
-  --background: oklch(0.15 0 0);
-  --surface-alt: oklch(0.17 0 0);
-  --surface: oklch(0.2 0 0);
-  --surface-secondary: oklch(0.225 0 0);
-  --surface-elevated: oklch(0.26 0 0);
+  --background: #10120f;
+  --surface-alt: #191c18;
+  --surface: #22251f;
+  --surface-secondary: #292c25;
+  --surface-elevated: #35382e;
 
-  --foreground: oklch(0.973 0 0);
-  --text-secondary: oklch(0.79 0 0);
-  --text-muted: oklch(0.62 0 0);
+  --foreground: #f7f1e4;
+  --text-secondary: #cec8b9;
+  --text-muted: #aaa596;
 
   --card: var(--surface);
   --card-foreground: var(--foreground);
@@ -85,9 +86,9 @@
   --accent-blue: oklch(0.665 0.128 232.6);
 
   /* #C2AE60 */
-  --gold: oklch(0.751 0.086 92.3);
-  --gold-dark: oklch(0.61 0.093 84.5);
-  --gold-light: oklch(0.916 0.058 100.4);
+  --gold: #cbb17c;
+  --gold-dark: #a48752;
+  --gold-light: #f4daa4;
 
   --whatsapp: oklch(0.762 0.185 148.2);
   --whatsapp-hover: oklch(0.694 0.169 148.2);
@@ -99,9 +100,9 @@
   --destructive: oklch(0.548 0.226 29.2);
   --destructive-foreground: oklch(0.985 0 0);
 
-  --border: oklch(1 0 0 / 8%);
-  --border-strong: oklch(1 0 0 / 16%);
-  --border-premium: oklch(0.751 0.086 92.3 / 30%);
+  --border: rgb(244 218 164 / 13%);
+  --border-strong: rgb(244 218 164 / 30%);
+  --border-premium: rgb(244 218 164 / 30%);
   --input: oklch(1 0 0 / 12%);
   --ring: var(--gold);
 }
@@ -167,23 +168,28 @@
 }
 
 @utility section {
-  padding-block: 72px;
+  padding-block: 88px;
 
   @media (min-width: 768px) {
-    padding-block: 100px;
+    padding-block: 124px;
   }
 }
 
 @utility hero-overlay {
   background: linear-gradient(
     90deg,
-    rgb(0 0 0 / 0.92) 0%,
-    rgb(0 0 0 / 0.68) 50%,
-    rgb(0 0 0 / 0.25) 100%
+    rgb(9 12 8 / 0.92) 0%,
+    rgb(9 12 8 / 0.66) 45%,
+    rgb(9 12 8 / 0.2) 100%
   );
 
   @media (max-width: 767px) {
-    background: linear-gradient(180deg, rgb(0 0 0 / 0.78) 0%, rgb(0 0 0 / 0.9) 100%);
+    background: linear-gradient(
+      180deg,
+      rgb(9 12 8 / 0.45),
+      rgb(9 12 8 / 0.7) 42%,
+      rgb(9 12 8 / 0.96)
+    );
   }
 }
 
@@ -209,9 +215,9 @@
 @utility card-experience {
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 20px;
-  padding: 24px;
-  box-shadow: 0 16px 45px rgb(0 0 0 / 0.3);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 20px 50px rgb(0 0 0 / 0.18);
   transition:
     transform 300ms ease,
     border-color 300ms ease,
@@ -236,17 +242,17 @@
 }
 
 @utility btn-whatsapp {
-  background: var(--whatsapp);
-  color: var(--whatsapp-foreground);
+  background: var(--gold-light);
+  color: var(--background);
   transition:
     background-color 200ms ease,
     transform 200ms ease,
     box-shadow 200ms ease;
 
   &:hover {
-    background: var(--whatsapp-hover);
+    background: #fff0c7;
     transform: translateY(-2px);
-    box-shadow: 0 12px 30px rgb(37 211 102 / 0.22);
+    box-shadow: 0 12px 30px rgb(244 218 164 / 0.2);
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -254,4 +260,17 @@
       transform: none;
     }
   }
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.73rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+::selection {
+  background: var(--gold);
+  color: var(--background);
 }
