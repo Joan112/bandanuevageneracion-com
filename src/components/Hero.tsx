@@ -1,82 +1,64 @@
-import { BadgeCheck, Clock, MessageCircle, Volume2 } from "lucide-react";
+import { ArrowDown, ArrowUpRight } from "lucide-react";
 import heroAsset from "@/assets/banda-integrantes.webp.asset.json";
-
 import { WhatsAppButton } from "@/components/WhatsAppButton";
-
-const badges = [
-  { icon: BadgeCheck, label: "Contratación formal" },
-  { icon: Clock, label: "Puntualidad" },
-  { icon: Volume2, label: "Audio profesional" },
-  { icon: MessageCircle, label: "Atención directa" },
-];
 
 export function Hero() {
   return (
-    <section id="inicio" className="relative flex min-h-[85vh] items-center overflow-hidden pt-[72px]">
+    <section
+      id="inicio"
+      className="hero-stage relative isolate flex min-h-[760px] items-end overflow-hidden pt-[72px] lg:min-h-screen"
+    >
       <img
         src={heroAsset.url}
-        alt="Integrantes de Banda Nueva Generación con trajes negros y dorados"
+        alt="Integrantes de Banda Nueva Generación con vestuario negro y dorado"
         width={1920}
         height={1280}
         fetchPriority="high"
-        className="absolute inset-0 h-full w-full object-cover"
+        className="absolute inset-0 -z-20 h-full w-full object-cover object-[62%_center]"
       />
-      <div className="hero-overlay absolute inset-0" aria-hidden="true" />
-
-      <div className="relative mx-auto w-full max-w-[1280px] px-5 py-20 md:px-8 md:py-28">
-        <div className="max-w-[700px]">
-
-          <p className="font-body text-xs font-bold uppercase tracking-[0.22em] text-gold">
-            Banda sinaloense en vivo
+      <div className="hero-overlay absolute inset-0 -z-10" aria-hidden="true" />
+      <div className="container-site relative w-full pb-16 pt-36 md:pb-24 lg:pb-28">
+        <div className="max-w-[850px]">
+          <p className="eyebrow flex items-center gap-3 text-gold-light">
+            <span className="h-px w-9 bg-gold" aria-hidden="true" />
+            Desde Sinaloa para tu celebración
           </p>
-          <h1 className="mt-5 font-display text-[40px] leading-[1.05] font-extrabold tracking-[-0.03em] text-foreground md:text-[52px] lg:text-[64px]">
-            Haz de tu evento una{" "}
-            <span className="text-gold">fiesta que nadie quiera que termine.</span>
+          <h1 className="mt-6 font-display text-[clamp(3.8rem,9vw,8.7rem)] font-medium leading-[0.92] tracking-[-0.055em] text-foreground">
+            Que la fiesta <em className="font-normal text-gold-light">se sienta.</em>
           </h1>
-          <p className="mt-6 font-body text-base leading-[1.65] text-muted-2">
-            Vive el auténtico sonido de Banda Nueva Generación con música en vivo, ambiente, energía y un
-            repertorio preparado para poner a cantar y bailar a todos tus invitados.
+          <p className="mt-8 max-w-[565px] text-lg leading-relaxed text-foreground/85 md:text-[21px]">
+            Música sinaloense en vivo para momentos que merecen sonar en grande. Presencia, energía
+            y una banda que hace cantar a todos.
           </p>
-
-          <p className="mt-7 font-body text-sm font-medium text-foreground/90">
-            Bodas · XV Años · Aniversarios · Jaripeos · Ferias · Eventos Privados
-          </p>
-          <p className="mt-2 font-body text-sm font-medium text-accent-blue">
-            Corridos clásicos · Rancheras · Cumbias · Románticas · Éxitos modernos
-          </p>
-
-          <ul className="mt-7 flex flex-wrap gap-2.5">
-            {badges.map(({ icon: Icon, label }) => (
-              <li
-                key={label}
-                className="inline-flex items-center gap-2 rounded-full border border-gold-soft bg-surface/70 px-3.5 py-2 font-body text-[13px] font-medium text-foreground backdrop-blur-sm"
-              >
-                <Icon size={16} strokeWidth={1.75} className="text-gold" aria-hidden="true" />
-                {label}
-              </li>
-            ))}
-          </ul>
-
           <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
             <WhatsAppButton
-              packageName="Consulta de disponibilidad (Hero)"
-              label="Consultar disponibilidad en WhatsApp"
+              packageName="Consulta de disponibilidad"
+              label="Cotiza tu fecha"
               analyticsId="hero_whatsapp"
               size="lg"
+              className="sm:w-auto"
             />
             <a
-              href="#paquetes"
-              className="inline-flex h-[60px] items-center justify-center rounded-[14px] border border-hairline-strong bg-surface-elevated px-8 font-body text-base font-bold text-foreground transition-transform duration-200 hover:-translate-y-0.5 hover:border-gold-soft"
+              href="#experiencia"
+              className="inline-flex h-[60px] items-center justify-center gap-2 rounded-full border border-white/40 px-8 text-base font-semibold text-white transition-colors hover:bg-white hover:text-background"
             >
-              Ver paquetes
+              Conoce la banda <ArrowUpRight size={18} aria-hidden="true" />
             </a>
           </div>
-          <p className="mt-4 font-body text-[13px] font-medium text-muted">
-            Respuesta directa del equipo de contrataciones · Sin intermediarios
+          <p className="mt-5 text-sm text-white/65">
+            Bodas · XV años · Fiestas privadas · Jaripeos · Ferias
           </p>
         </div>
+        <a
+          href="#paquetes"
+          className="mt-16 inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.18em] text-white/75 hover:text-white md:mt-24"
+        >
+          Explora nuestros formatos <ArrowDown size={17} aria-hidden="true" />
+        </a>
       </div>
-
+      <span className="pointer-events-none absolute bottom-16 right-8 hidden rotate-90 origin-right text-xs font-bold uppercase tracking-[0.3em] text-white/60 lg:block">
+        Banda Nueva Generación · Sinaloa
+      </span>
     </section>
   );
 }
