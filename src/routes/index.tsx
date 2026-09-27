@@ -7,12 +7,11 @@ import { StickyWhatsApp } from "@/components/StickyWhatsApp";
 import {
   FAQAccordion,
   FinalCTA,
+  ExperienceSection,
   GuaranteesSection,
   PackagesSection,
-  PaymentMethodsSection,
   RepertoireSection,
   StepsSection,
-  TestimonialsSection,
   TrustStrip,
   VideoSection,
 } from "@/components/Sections";
@@ -51,13 +50,12 @@ function Index() {
       <main>
         <Hero />
         <TrustStrip />
+        <ExperienceSection />
         <PackagesSection />
         <VideoSection />
         <RepertoireSection />
         <StepsSection />
-        <PaymentMethodsSection />
         <GuaranteesSection />
-        <TestimonialsSection />
         <FAQAccordion />
         <FinalCTA />
       </main>
@@ -65,7 +63,6 @@ function Index() {
       <StickyWhatsApp />
       <script
         type="application/ld+json"
-        // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
     </>
