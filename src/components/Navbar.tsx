@@ -7,17 +7,21 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-hairline bg-background/80 backdrop-blur-md">
-      <div className="mx-auto flex h-[72px] max-w-[1280px] items-center justify-between gap-4 px-5 md:px-8">
-        <a href="#inicio" className="flex min-w-0 items-center gap-3" aria-label={siteConfig.brandName}>
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-background/85 backdrop-blur-xl">
+      <div className="mx-auto flex h-[76px] max-w-[1280px] items-center justify-between gap-4 px-5 md:px-8">
+        <a
+          href="#inicio"
+          className="flex min-w-0 items-center gap-3"
+          aria-label={siteConfig.brandName}
+        >
           <img
             src={siteConfig.logo}
             alt={`Logo ${siteConfig.brandName}`}
             width={48}
             height={48}
-            className="h-11 w-11 shrink-0 object-contain"
+            className="h-12 w-12 shrink-0 object-contain"
           />
-          <span className="truncate font-display text-[15px] leading-tight font-extrabold uppercase tracking-tight text-foreground">
+          <span className="truncate font-body text-[13px] leading-tight font-bold uppercase tracking-[0.08em] text-foreground">
             Banda Nueva
             <span className="block text-gold">Generación</span>
           </span>
@@ -28,7 +32,7 @@ export function Navbar() {
             <a
               key={l.href}
               href={l.href}
-              className="font-body text-sm font-medium text-muted-2 transition-colors duration-200 hover:text-foreground focus-visible:text-foreground"
+              className="font-body text-[13px] font-semibold text-muted-2 transition-colors duration-200 hover:text-gold-light focus-visible:text-gold-light"
             >
               {l.label}
             </a>
@@ -56,7 +60,10 @@ export function Navbar() {
 
       {open && (
         <div className="border-t border-hairline bg-surface lg:hidden">
-          <nav aria-label="Navegación móvil" className="mx-auto flex max-w-[1280px] flex-col px-5 py-3">
+          <nav
+            aria-label="Navegación móvil"
+            className="mx-auto flex max-w-[1280px] flex-col px-5 py-3"
+          >
             {navLinks.map((l) => (
               <a
                 key={l.href}

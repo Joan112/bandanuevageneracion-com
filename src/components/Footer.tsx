@@ -32,20 +32,24 @@ export function Footer() {
             Banda sinaloense en vivo para eventos privados, bodas, XV años, jaripeos, ferias y
             celebraciones especiales.
           </p>
-          <div className="mt-6 flex gap-3">
-            {socials.map(({ icon: Icon, label, url }) => (
-              <a
-                key={label}
-                href={url || "#contacto"}
-                aria-label={label}
-                target={url ? "_blank" : undefined}
-                rel={url ? "noopener noreferrer" : undefined}
-                className="grid h-11 w-11 place-items-center rounded-xl border border-hairline text-muted-2 transition-colors hover:border-gold-soft hover:text-gold"
-              >
-                <Icon size={18} strokeWidth={1.75} aria-hidden="true" />
-              </a>
-            ))}
-          </div>
+          {socials.some(({ url }) => Boolean(url)) && (
+            <div className="mt-6 flex gap-3">
+              {socials
+                .filter(({ url }) => Boolean(url))
+                .map(({ icon: Icon, label, url }) => (
+                  <a
+                    key={label}
+                    href={url}
+                    aria-label={label}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="grid h-11 w-11 place-items-center rounded-xl border border-hairline text-muted-2 transition-colors hover:border-gold-soft hover:text-gold"
+                  >
+                    <Icon size={18} strokeWidth={1.75} aria-hidden="true" />
+                  </a>
+                ))}
+            </div>
+          )}
         </div>
 
         <nav aria-label="Enlaces del sitio">
@@ -100,7 +104,8 @@ export function Footer() {
       <div className="border-t border-hairline">
         <div className="container-site flex flex-col gap-3 py-7 font-body text-[13px] text-muted md:flex-row md:items-center md:justify-between">
           <p>
-            Todos los servicios están sujetos a disponibilidad, ubicación y condiciones de contratación.
+            Todos los servicios están sujetos a disponibilidad, ubicación y condiciones de
+            contratación.
           </p>
           <p>© {new Date().getFullYear()} Banda Nueva Generación.</p>
         </div>

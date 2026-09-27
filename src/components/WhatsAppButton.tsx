@@ -28,7 +28,7 @@ export function WhatsAppButton({
       aria-label={`${label} por WhatsApp`}
       onClick={() => trackConversion(analyticsId, { package: packageName })}
       className={cn(
-        "btn-whatsapp inline-flex items-center justify-center gap-2.5 rounded-[14px] font-body font-bold tracking-[0.01em]",
+        "btn-whatsapp inline-flex items-center justify-center gap-2.5 rounded-full font-body font-bold tracking-[0.01em]",
         size === "lg" ? "h-[60px] px-8 text-[17px]" : "h-[54px] px-[22px] text-base",
         fullWidth ? "w-full" : "w-full sm:w-auto",
         className,
