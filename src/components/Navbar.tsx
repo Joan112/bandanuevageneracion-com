@@ -7,8 +7,8 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-background/85 backdrop-blur-xl">
-      <div className="mx-auto flex h-[76px] max-w-[1280px] items-center justify-between gap-4 px-5 md:px-8">
+    <header className="new-nav">
+      <div className="mx-auto flex h-[82px] max-w-[1500px] items-center justify-between gap-4 px-5 md:px-10">
         <a
           href="#inicio"
           className="flex min-w-0 items-center gap-3"
@@ -19,20 +19,20 @@ export function Navbar() {
             alt={`Logo ${siteConfig.brandName}`}
             width={48}
             height={48}
-            className="h-12 w-12 shrink-0 object-contain"
+            className="h-14 w-14 shrink-0 object-contain"
           />
-          <span className="truncate font-body text-[13px] leading-tight font-bold uppercase tracking-[0.08em] text-foreground">
+          <span className="truncate font-body text-[12px] leading-tight font-bold uppercase tracking-[0.16em] text-foreground">
             Banda Nueva
             <span className="block text-gold">Generación</span>
           </span>
         </a>
 
-        <nav aria-label="Navegación principal" className="hidden items-center gap-7 lg:flex">
+        <nav aria-label="Navegación principal" className="hidden items-center gap-6 lg:flex">
           {navLinks.map((l) => (
             <a
               key={l.href}
               href={l.href}
-              className="font-body text-[13px] font-semibold text-muted-2 transition-colors duration-200 hover:text-gold-light focus-visible:text-gold-light"
+              className="font-body text-[12px] font-bold uppercase tracking-[0.1em] text-muted-2 transition-colors duration-200 hover:text-gold-light focus-visible:text-gold-light"
             >
               {l.label}
             </a>
@@ -42,8 +42,9 @@ export function Navbar() {
         <div className="hidden lg:block">
           <WhatsAppButton
             packageName="Consulta general de disponibilidad"
-            label="Consultar disponibilidad"
+            label="Cotizar fecha"
             analyticsId="navbar_whatsapp"
+            className="nav-button"
           />
         </div>
 

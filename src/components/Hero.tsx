@@ -1,64 +1,55 @@
 import { ArrowDown, ArrowUpRight } from "lucide-react";
-import heroAsset from "@/assets/banda-integrantes.webp.asset.json";
+import band from "@/assets/banda-integrantes.webp.asset.json";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 export function Hero() {
   return (
-    <section
-      id="inicio"
-      className="hero-stage relative isolate flex min-h-[760px] items-end overflow-hidden pt-[72px] lg:min-h-screen"
-    >
-      <img
-        src={heroAsset.url}
-        alt="Integrantes de Banda Nueva Generación con vestuario negro y dorado"
-        width={1920}
-        height={1280}
-        fetchPriority="high"
-        className="absolute inset-0 -z-20 h-full w-full object-cover object-[62%_center]"
-      />
-      <div className="hero-overlay absolute inset-0 -z-10" aria-hidden="true" />
-      <div className="container-site relative w-full pb-16 pt-36 md:pb-24 lg:pb-28">
-        <div className="max-w-[850px]">
-          <p className="eyebrow flex items-center gap-3 text-gold-light">
-            <span className="h-px w-9 bg-gold" aria-hidden="true" />
-            Desde Sinaloa para tu celebración
+    <section id="inicio" className="hero-new">
+      <div className="hero-image">
+        <img
+          src={band.url}
+          alt="Integrantes de Banda Nueva Generación"
+          width={1200}
+          height={900}
+          fetchPriority="high"
+        />
+        <span className="hero-image-caption">BANDA NUEVA GENERACIÓN · EN VIVO</span>
+      </div>
+      <div className="hero-copy">
+        <div className="hero-copy-inner">
+          <p className="kicker">
+            <span className="kicker-line" /> SINALOA SE ESCUCHA AQUÍ
           </p>
-          <h1 className="mt-6 font-display text-[clamp(3.8rem,9vw,8.7rem)] font-medium leading-[0.92] tracking-[-0.055em] text-foreground">
-            Que la fiesta <em className="font-normal text-gold-light">se sienta.</em>
+          <h1>
+            La fiesta
+            <br />
+            tiene <em>otro</em>
+            <br />
+            sonido<span className="period">.</span>
           </h1>
-          <p className="mt-8 max-w-[565px] text-lg leading-relaxed text-foreground/85 md:text-[21px]">
-            Música sinaloense en vivo para momentos que merecen sonar en grande. Presencia, energía
-            y una banda que hace cantar a todos.
+          <p className="hero-intro">
+            Banda sinaloense en vivo para noches que se cuentan durante años. Tu gente, tu momento,
+            nuestra música.
           </p>
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
+          <div className="hero-actions">
             <WhatsAppButton
               packageName="Consulta de disponibilidad"
               label="Cotiza tu fecha"
               analyticsId="hero_whatsapp"
               size="lg"
-              className="sm:w-auto"
             />
-            <a
-              href="#experiencia"
-              className="inline-flex h-[60px] items-center justify-center gap-2 rounded-full border border-white/40 px-8 text-base font-semibold text-white transition-colors hover:bg-white hover:text-background"
-            >
-              Conoce la banda <ArrowUpRight size={18} aria-hidden="true" />
+            <a href="#paquetes" className="text-action">
+              Ver formatos <ArrowUpRight size={18} aria-hidden="true" />
             </a>
           </div>
-          <p className="mt-5 text-sm text-white/65">
-            Bodas · XV años · Fiestas privadas · Jaripeos · Ferias
-          </p>
         </div>
-        <a
-          href="#paquetes"
-          className="mt-16 inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.18em] text-white/75 hover:text-white md:mt-24"
-        >
-          Explora nuestros formatos <ArrowDown size={17} aria-hidden="true" />
-        </a>
+        <div className="hero-bottom">
+          <span>BODAS / XV AÑOS / FIESTAS / ESCENARIOS</span>
+          <a href="#experiencia" aria-label="Descubre la banda">
+            <ArrowDown size={22} />
+          </a>
+        </div>
       </div>
-      <span className="pointer-events-none absolute bottom-16 right-8 hidden rotate-90 origin-right text-xs font-bold uppercase tracking-[0.3em] text-white/60 lg:block">
-        Banda Nueva Generación · Sinaloa
-      </span>
     </section>
   );
 }
