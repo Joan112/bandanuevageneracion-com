@@ -97,6 +97,17 @@
   width: min(100% - 72px, 1440px);
   margin-inline: auto;
 }
+.container-site {
+  width: 100%;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: 20px;
+}
+@media (min-width: 768px) {
+  .container-site {
+    padding-inline: 32px;
+  }
+}
 .kicker {
   font:
     700 11px/1.4 "DM Sans",
