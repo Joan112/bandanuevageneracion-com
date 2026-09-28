@@ -106,10 +106,10 @@ export const packages: Package[] = [
 
 export const navLinks = [
   { label: "Inicio", href: "#inicio" },
-  { label: "Paquetes", href: "#paquetes" },
   { label: "La banda", href: "#experiencia" },
   { label: "Escenario", href: "#escenario" },
+  { label: "Formatos", href: "#paquetes" },
   { label: "Cómo contratar", href: "#como-contratar" },
-  { label: "Garantías", href: "#garantias" },
+  { label: "Preguntas", href: "#preguntas" },
   { label: "Contacto", href: "#contacto" },
 ];
