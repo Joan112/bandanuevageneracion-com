@@ -5,15 +5,13 @@ import { Hero } from "@/components/Hero";
 import { Footer } from "@/components/Footer";
 import { StickyWhatsApp } from "@/components/StickyWhatsApp";
 import {
-  FAQAccordion,
+  FAQSection,
   FinalCTA,
   ExperienceSection,
-  GuaranteesSection,
+  Marquee,
   PackagesSection,
-  RepertoireSection,
   StepsSection,
-  TrustStrip,
-  VideoSection,
+  StageSection,
 } from "@/components/Sections";
 
 const title = "Banda Nueva Generación | Banda Sinaloense para Eventos";
@@ -49,14 +47,12 @@ function Index() {
       <Navbar />
       <main>
         <Hero />
-        <TrustStrip />
+        <Marquee />
         <ExperienceSection />
+        <StageSection />
         <PackagesSection />
-        <VideoSection />
-        <RepertoireSection />
         <StepsSection />
-        <GuaranteesSection />
-        <FAQAccordion />
+        <FAQSection />
         <FinalCTA />
       </main>
       <Footer />
